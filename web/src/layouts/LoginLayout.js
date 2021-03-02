@@ -40,7 +40,9 @@ class LoginContent extends Component {
 
     handleEnterKey = (e) => {
         if (e.nativeEvent.keyCode === 13) {
-            this.handleSubmit();
+            this.formRef.current.validateFields().then((values) => {
+                this.handleSubmit(values);
+            });
         }
     };
 
