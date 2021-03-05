@@ -241,7 +241,6 @@ class RdsContent extends Component {
                     title: "实例描述",
                     dataIndex: "DBInstanceDescription",
                     key: "DBInstanceDescription",
-                    width: 200,
                     width: 250,
                     render: (value, record) => {
                         return (

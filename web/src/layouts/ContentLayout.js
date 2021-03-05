@@ -7,7 +7,7 @@ import RdsContent from "../components/cloud_resource/rds_content";
 import KvContent from "../components/cloud_resource/kv_content";
 import SlbContent from "../components/cloud_resource/slb_content";
 import CloudContent from "../components/cloud_resource/account_content";
-import Task_content from "../components/task/task_content";
+import TaskContent from "../components/task/task_content";
 import UserManager from "../components/permissions/user_manager";
 import RolesManager from "../components/permissions/role_manager";
 import PermissionsManager from "../components/permissions/permission_manager";
@@ -26,7 +26,6 @@ import AuthManageContent from "../components/dms/auth_manage";
 import DataManageContent from "../components/dms/data_manage";
 
 const { Content } = Layout;
-
 class ContentLayout extends Component {
     constructor(props) {
         super(props);
@@ -111,7 +110,7 @@ class ContentLayout extends Component {
                     <Route
                         path="/admin/task"
                         render={() => (
-                            <Task_content
+                            <TaskContent
                                 isSuperAdmin={this.state.isSuperAdmin}
                             />
                         )}

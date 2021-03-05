@@ -35,10 +35,6 @@ let columnStyle = {
 };
 
 class RoleModal extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const formItemLayout = {
             labelCol: { span: 6 },

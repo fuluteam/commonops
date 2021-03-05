@@ -32,13 +32,9 @@
 >
 > 4、后端源码构建
 >
-> > 4.1、配置数据库信息
+> > 4.1、设置配置文件
 > >
-> >     commonops/ops/conf/mysql.go
-> >
-> > 4.2、配置后端服务端口信息
-> >
-> >     commonops/ops/conf/app.go
+> >     commonops/ops/conf/config.ini
 > >
 > > 4.3、构建
 > >
@@ -77,6 +73,8 @@
 > 8.1、后端服务启动:
 >
 > nohup ./ops.go 2>&1 > ops.log &
+> 
+> 项目配置文件请放在当前执行目录下 ./conf/config.ini 
 >
 > 8.2、nginx 启动:
 >

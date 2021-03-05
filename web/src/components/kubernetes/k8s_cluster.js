@@ -13,6 +13,7 @@ import {
     message,
     Popconfirm,
     Col,
+    Select,
 } from "antd";
 import {
     deleteCluster,
@@ -21,6 +22,14 @@ import {
 } from "../../api/kubernetes";
 
 const { Content } = Layout;
+const {Option} = Select;
+
+const selectBefore = (
+    <Select defaultValue="http://" className="select-before">
+        <Option value="http://">http://</Option>
+        <Option value="https://">https://</Option>
+    </Select>
+);
 
 class ClusterManageContent extends Component {
     constructor(props) {
@@ -232,9 +241,7 @@ class ClusterManageContent extends Component {
                                 { required: true, message: "该项为必填项" },
                             ]}
                         >
-                            <Input
-                                addonBefore="http://"
-                            />
+                            <Input addonBefore={selectBefore} />
                         </Form.Item>
                         <Form.Item
                             label="Admin Token"

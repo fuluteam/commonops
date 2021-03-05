@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import {
     Button,
     Layout,
@@ -13,8 +13,6 @@ import {
     Icon,
     Card,
     Empty,
-    Popconfirm,
-    Input,
     Col,
 } from "antd";
 import OpsBreadcrumbPath from "../breadcrumb_path";
@@ -23,7 +21,6 @@ import {
     getUserDmsInstanceData,
     getUserDmsLog,
     postDmsUserExecSQL,
-    postDmsUserSubmitSQL,
 } from "../../api/dms_api";
 import "../../assets/css/dms.css";
 import { Controlled as CodeMirror } from "react-codemirror2";
@@ -38,7 +35,6 @@ const { Content } = Layout;
 const { TreeNode } = Tree;
 const { Text, Paragraph } = Typography;
 const { TabPane } = Tabs;
-const { TextArea } = Input;
 
 const left_panel = {
     float: "left",

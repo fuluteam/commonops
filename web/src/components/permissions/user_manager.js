@@ -27,10 +27,6 @@ let columnStyle = {
 };
 
 class UserModal extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const formItemLayout = {
             labelCol: { span: 7 },
@@ -167,7 +163,7 @@ class UserManager extends Component {
                     align: "center",
                     render: (text, record) => {
                         let disabled = false;
-                        if (record.email === "admin@ops.com") {
+                        if (record.count === 1 && record.email === "admin@ops.com") {
                             disabled = true;
                         }
                         return (
@@ -277,6 +273,7 @@ class UserManager extends Component {
                         email: data[i]["email"],
                         position: data[i]["position"],
                         active: data[i]["active"],
+                        count: data.length,
                     });
                 }
                 this.setState({ tableData: tableData, tableLoading: false });

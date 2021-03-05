@@ -41,8 +41,6 @@ import {
     postApplyYaml,
     putResourceScale,
     getIngresses,
-    getNodeMetrics,
-    getPodMetrics,
 } from "../../api/kubernetes";
 import moment from "moment";
 import { Controlled as CodeMirror } from "react-codemirror2";
@@ -312,21 +310,21 @@ class K8sNamespacesContent extends Component {
                         const menu = (
                             <Menu>
                                 <Menu.Item key="0">
-                                    <a
-                                        rel="noopener noreferrer"
-                                        href="#"
+                                    <Button
+                                        type="link"
                                         onClick={this.autoScaleHandler.bind(
                                             this,
                                             "rc",
                                             record,
                                         )}
                                     >
+                                        {" "}
                                         伸缩
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                                 <Menu.Item key="1">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.deleteHandler.bind(
                                             this,
                                             "rc",
@@ -334,11 +332,11 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         删除
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                                 <Menu.Item key="2">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.showYamlHandler.bind(
                                             this,
                                             "rc",
@@ -346,15 +344,18 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         查看yaml文件
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                             </Menu>
                         );
                         return (
                             <Dropdown overlay={menu} trigger={["click"]}>
-                                <a className="ant-dropdown-link" href="#">
+                                <Button
+                                    type="link"
+                                    className="ant-dropdown-link"
+                                >
                                     资源操作 <Icon type="down" />
-                                </a>
+                                </Button>
                             </Dropdown>
                         );
                     },
@@ -463,9 +464,8 @@ class K8sNamespacesContent extends Component {
                         const menu = (
                             <Menu>
                                 <Menu.Item key="0">
-                                    <a
-                                        rel="noopener noreferrer"
-                                        href="#"
+                                    <Button
+                                        type="link"
                                         onClick={this.autoScaleHandler.bind(
                                             this,
                                             "rs",
@@ -473,11 +473,11 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         伸缩
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                                 <Menu.Item key="1">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.deleteHandler.bind(
                                             this,
                                             "rs",
@@ -485,11 +485,11 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         删除
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                                 <Menu.Item key="2">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.showYamlHandler.bind(
                                             this,
                                             "rs",
@@ -497,15 +497,18 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         查看yaml文件
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                             </Menu>
                         );
                         return (
                             <Dropdown overlay={menu} trigger={["click"]}>
-                                <a className="ant-dropdown-link" href="#">
+                                <Button
+                                    type="link"
+                                    className="ant-dropdown-link"
+                                >
                                     资源操作 <Icon type="down" />
-                                </a>
+                                </Button>
                             </Dropdown>
                         );
                     },
@@ -604,8 +607,8 @@ class K8sNamespacesContent extends Component {
                         const menu = (
                             <Menu>
                                 <Menu.Item key="0">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.deleteHandler.bind(
                                             this,
                                             "service",
@@ -613,11 +616,11 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         删除
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                                 <Menu.Item key="1">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.showYamlHandler.bind(
                                             this,
                                             "service",
@@ -625,15 +628,18 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         查看yaml文件
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                             </Menu>
                         );
                         return (
                             <Dropdown overlay={menu} trigger={["click"]}>
-                                <a className="ant-dropdown-link" href="#">
+                                <Button
+                                    className="ant-dropdown-link"
+                                    type="link"
+                                >
                                     资源操作 <Icon type="down" />
-                                </a>
+                                </Button>
                             </Dropdown>
                         );
                     },
@@ -712,8 +718,8 @@ class K8sNamespacesContent extends Component {
                         const menu = (
                             <Menu>
                                 <Menu.Item key="1">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.deleteHandler.bind(
                                             this,
                                             "ingress",
@@ -721,11 +727,11 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         删除
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                                 <Menu.Item key="2">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.showYamlHandler.bind(
                                             this,
                                             "ingress",
@@ -733,15 +739,18 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         查看yaml文件
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                             </Menu>
                         );
                         return (
                             <Dropdown overlay={menu} trigger={["click"]}>
-                                <a className="ant-dropdown-link" href="#">
+                                <Button
+                                    className="ant-dropdown-link"
+                                    type="link"
+                                >
                                     资源操作 <Icon type="down" />
-                                </a>
+                                </Button>
                             </Dropdown>
                         );
                     },
@@ -850,9 +859,8 @@ class K8sNamespacesContent extends Component {
                         const menu = (
                             <Menu>
                                 <Menu.Item key="0">
-                                    <a
-                                        rel="noopener noreferrer"
-                                        href="#"
+                                    <Button
+                                        type="link"
                                         onClick={this.autoScaleHandler.bind(
                                             this,
                                             "deployment",
@@ -860,11 +868,11 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         伸缩
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                                 <Menu.Item key="1">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.deleteHandler.bind(
                                             this,
                                             "deployment",
@@ -872,11 +880,11 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         删除
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                                 <Menu.Item key="2">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.showYamlHandler.bind(
                                             this,
                                             "deployment",
@@ -884,15 +892,18 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         查看yaml文件
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                             </Menu>
                         );
                         return (
                             <Dropdown overlay={menu} trigger={["click"]}>
-                                <a className="ant-dropdown-link" href="#">
+                                <Button
+                                    className="ant-dropdown-link"
+                                    type="link"
+                                >
                                     资源操作 <Icon type="down" />
-                                </a>
+                                </Button>
                             </Dropdown>
                         );
                     },
@@ -987,8 +998,8 @@ class K8sNamespacesContent extends Component {
                         const menu = (
                             <Menu>
                                 <Menu.Item key="1">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.deleteHandler.bind(
                                             this,
                                             "pod",
@@ -996,11 +1007,11 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         删除
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                                 <Menu.Item key="2">
-                                    <a
-                                        rel="noopener noreferrer"
+                                    <Button
+                                        type="link"
                                         onClick={this.showYamlHandler.bind(
                                             this,
                                             "pod",
@@ -1008,15 +1019,18 @@ class K8sNamespacesContent extends Component {
                                         )}
                                     >
                                         查看yaml文件
-                                    </a>
+                                    </Button>
                                 </Menu.Item>
                             </Menu>
                         );
                         return (
                             <Dropdown overlay={menu} trigger={["click"]}>
-                                <a className="ant-dropdown-link" href="#">
+                                <Button
+                                    className="ant-dropdown-link"
+                                    type="link"
+                                >
                                     资源操作 <Icon type="down" />
-                                </a>
+                                </Button>
                             </Dropdown>
                         );
                     },
@@ -1712,6 +1726,7 @@ class K8sNamespacesContent extends Component {
                             <a
                                 href="https://kubernetes.io/docs/home/"
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 官方文档
                             </a>

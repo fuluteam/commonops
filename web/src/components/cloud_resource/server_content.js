@@ -295,7 +295,6 @@ class ServerContent extends Component {
                 },
                 {
                     title: "实例id",
-                    width: 230,
                     dataIndex: "InstanceId",
                     key: "InstanceId",
                     width: 200,

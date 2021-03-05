@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
-
-
-
 class LogoutContent extends Component {
-
     componentWillMount() {
         localStorage.removeItem("ops_token");
         localStorage.removeItem("token_info");
@@ -19,6 +15,5 @@ class LogoutContent extends Component {
     }
 
 }
-
 
 export default LogoutContent;

@@ -5,6 +5,7 @@ import (
 	"github.com/chujieyang/commonops/ops/conf"
 	"github.com/chujieyang/commonops/ops/controllers"
 	_ "github.com/chujieyang/commonops/ops/cron"
+	_ "github.com/chujieyang/commonops/ops/conf"
 	"github.com/gin-gonic/gin"
 )
 
@@ -27,8 +28,7 @@ func main() {
 	engine := gin.Default()
 	engine.Use(optionsMiddleware)
 	controllers.RegisterRouter(engine)
-	err := engine.Run(":" + conf.Port)
-	if err != nil {
-		fmt.Println("启动异常: ", err)
+	if err := engine.Run(":" + conf.Port); err != nil {
+		panic(fmt.Sprintf("服务启动异常: %s", err))
 	}
 }
