@@ -1,151 +1,167 @@
 import req from "../utils/axios";
 
-const getCloudServers = (params) =>{
-    return req.get('cloud/servers', params)
+const getCloudServers = (params) => {
+    return req.get("cloud/servers", params);
 };
-export {getCloudServers}
+export { getCloudServers };
 
-const getCloudServerDetail = (id) =>{
-    return req.get('cloud/servers/'+id)
+const getCloudServerDetail = (id) => {
+    return req.get("cloud/servers/" + id);
 };
-export {getCloudServerDetail}
+export { getCloudServerDetail };
 
-const getCloudAccouts = (page, size) =>{
-    return req.get('cloud/accounts',{page, size})
+const getCloudAccouts = (page, size) => {
+    return req.get("cloud/accounts", { page, size });
 };
-export {getCloudAccouts}
+export { getCloudAccouts };
 
-const postCloudAccouts = (data) =>{
-    return req.post('cloud/accounts', data)
+const postCloudAccouts = (data) => {
+    return req.post("cloud/accounts", data);
 };
-export {postCloudAccouts}
+export { postCloudAccouts };
 
-const putCloudAccouts = (data) =>{
-    return req.put('cloud/accounts', data)
+const putCloudAccouts = (data) => {
+    return req.put("cloud/accounts", data);
 };
-export {putCloudAccouts}
+export { putCloudAccouts };
 
-const deleteCloudAccouts = (data) =>{
-    return req.delete('cloud/accounts', data)
+const deleteCloudAccouts = (data) => {
+    return req.delete("cloud/accounts", data);
 };
-export {deleteCloudAccouts}
+export { deleteCloudAccouts };
 
-const getCloudMonitorEcs = (instanceId, timeDimension, metricDimension) =>{
-    return req.get('cloud/monitor/ecs',{instanceId, timeDimension, metricDimension})
+const getCloudMonitorEcs = (instanceId, timeDimension, metricDimension) => {
+    return req.get("cloud/monitor/ecs", {
+        instanceId,
+        timeDimension,
+        metricDimension,
+    });
 };
-export {getCloudMonitorEcs}
+export { getCloudMonitorEcs };
 
-const getCloudMonitorRds = (instanceId, timeDimension, metricDimension) =>{
-    return req.get('cloud/monitor/rds',{instanceId, timeDimension, metricDimension})
+const getCloudMonitorRds = (instanceId, timeDimension, metricDimension) => {
+    return req.get("cloud/monitor/rds", {
+        instanceId,
+        timeDimension,
+        metricDimension,
+    });
 };
-export {getCloudMonitorRds}
+export { getCloudMonitorRds };
 
-const getCloudMonitorKv = (instanceId, timeDimension, metricDimension) =>{
-    return req.get('cloud/monitor/kv',{instanceId, timeDimension, metricDimension})
+const getCloudMonitorKv = (instanceId, timeDimension, metricDimension) => {
+    return req.get("cloud/monitor/kv", {
+        instanceId,
+        timeDimension,
+        metricDimension,
+    });
 };
-export {getCloudMonitorKv}
+export { getCloudMonitorKv };
 
-const getCloudMonitorSlb = (instanceId, timeDimension, metricDimension) =>{
-    return req.get('cloud/monitor/slb',{instanceId, timeDimension, metricDimension})
+const getCloudMonitorSlb = (instanceId, timeDimension, metricDimension) => {
+    return req.get("cloud/monitor/slb", {
+        instanceId,
+        timeDimension,
+        metricDimension,
+    });
 };
-export {getCloudMonitorSlb}
+export { getCloudMonitorSlb };
 
-const getCloudRds = (params) =>{
-    return req.get('cloud/rds',params)
+const getCloudRds = (params) => {
+    return req.get("cloud/rds", params);
 };
-export {getCloudRds}
+export { getCloudRds };
 
-const getCloudKv = (params) =>{
-    return req.get('cloud/kv',params)
+const getCloudKv = (params) => {
+    return req.get("cloud/kv", params);
 };
-export {getCloudKv}
+export { getCloudKv };
 
-const getCloudSlb = (params) =>{
-    return req.get('cloud/slb',params)
+const getCloudSlb = (params) => {
+    return req.get("cloud/slb", params);
 };
-export {getCloudSlb}
+export { getCloudSlb };
 
-const getCloudRdsDetail = (id) =>{
-    return req.get('cloud/rds/'+id)
+const getCloudRdsDetail = (id) => {
+    return req.get("cloud/rds/" + id);
 };
-export {getCloudRdsDetail}
+export { getCloudRdsDetail };
 
-const getCloudKvDetail = (id) =>{
-    return req.get('cloud/kv/'+id)
+const getCloudKvDetail = (id) => {
+    return req.get("cloud/kv/" + id);
 };
-export {getCloudKvDetail}
+export { getCloudKvDetail };
 
-const getCloudSlbDetail = (id) =>{
-    return req.get('cloud/slb/'+id)
+const getCloudSlbDetail = (id) => {
+    return req.get("cloud/slb/" + id);
 };
-export {getCloudSlbDetail}
+export { getCloudSlbDetail };
 
-const postCloudServer = (data) =>{
-    return req.post('cloud/servers', data)
+const postCloudServer = (data) => {
+    return req.post("cloud/servers", data);
 };
-export {postCloudServer}
+export { postCloudServer };
 
-const putCloudServer = (data) =>{
-    return req.put('cloud/servers', data)
+const putCloudServer = (data) => {
+    return req.put("cloud/servers", data);
 };
-export {putCloudServer}
+export { putCloudServer };
 
-const deleteCloudServer = (id) =>{
-    return req.delete('cloud/servers', {id: id})
+const deleteCloudServer = (id) => {
+    return req.delete("cloud/servers", { id: id });
 };
-export {deleteCloudServer}
+export { deleteCloudServer };
 
-const deleteCloudKv = (id) =>{
-    return req.delete('cloud/kv', {id: id})
+const deleteCloudKv = (id) => {
+    return req.delete("cloud/kv", { id: id });
 };
-export {deleteCloudKv}
+export { deleteCloudKv };
 
-const postCloudKv = (data) =>{
-    return req.post('cloud/kv', data)
+const postCloudKv = (data) => {
+    return req.post("cloud/kv", data);
 };
-export {postCloudKv}
+export { postCloudKv };
 
-const putCloudKv = (data) =>{
-    return req.put('cloud/kv', data)
+const putCloudKv = (data) => {
+    return req.put("cloud/kv", data);
 };
-export {putCloudKv}
+export { putCloudKv };
 
-const putCloudRds = (data) =>{
-    return req.put('cloud/rds', data)
+const putCloudRds = (data) => {
+    return req.put("cloud/rds", data);
 };
-export {putCloudRds}
+export { putCloudRds };
 
-const postCloudRds = (data) =>{
-    return req.post('cloud/rds', data)
+const postCloudRds = (data) => {
+    return req.post("cloud/rds", data);
 };
-export {postCloudRds}
+export { postCloudRds };
 
-const deleteCloudRds = (id) =>{
-    return req.delete('cloud/rds', {id: id})
+const deleteCloudRds = (id) => {
+    return req.delete("cloud/rds", { id: id });
 };
-export {deleteCloudRds}
+export { deleteCloudRds };
 
-const deleteCloudSlb = (id) =>{
-    return req.delete('cloud/slb', {id: id})
+const deleteCloudSlb = (id) => {
+    return req.delete("cloud/slb", { id: id });
 };
-export {deleteCloudSlb}
+export { deleteCloudSlb };
 
-const getCloudOtherRes = (params) =>{
-    return req.get('cloud/other', params)
+const getCloudOtherRes = (params) => {
+    return req.get("cloud/other", params);
 };
-export {getCloudOtherRes}
+export { getCloudOtherRes };
 
-const postCloudOtherRes = (data) =>{
-    return req.post('cloud/other', data)
+const postCloudOtherRes = (data) => {
+    return req.post("cloud/other", data);
 };
-export {postCloudOtherRes}
+export { postCloudOtherRes };
 
-const putCloudOtherRes = (data) =>{
-    return req.put('cloud/other', data)
+const putCloudOtherRes = (data) => {
+    return req.put("cloud/other", data);
 };
-export {putCloudOtherRes}
+export { putCloudOtherRes };
 
-const deleteCloudOtherRes = (id) =>{
-    return req.delete('cloud/other', {id: id})
+const deleteCloudOtherRes = (id) => {
+    return req.delete("cloud/other", { id: id });
 };
-export {deleteCloudOtherRes}
+export { deleteCloudOtherRes };

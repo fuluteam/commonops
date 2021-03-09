@@ -72,3 +72,13 @@ func UpdateCloudAccount(data forms.CloudAccountForm) (err error) {
 	err = database.MysqlClient.Save(&cloudAccount).Error
 	return
 }
+
+func GetCloudAccountInfo(id int) (cloudAccount CloudAccount, err error) {
+	err = database.MysqlClient.Raw("select * from cloud_account where id = ?", id).Scan(&cloudAccount).Error
+	return
+}
+
+func GetCloudAccountInfoByName(name string) (cloudAccount CloudAccount, err error) {
+	err = database.MysqlClient.Raw("select * from cloud_account where name = ?", name).Scan(&cloudAccount).Error
+	return
+}

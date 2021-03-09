@@ -24,6 +24,7 @@ import KubernetesContent from "../components/kubernetes/kubernetes";
 import InstanceManageContent from "../components/dms/instance_manage";
 import AuthManageContent from "../components/dms/auth_manage";
 import DataManageContent from "../components/dms/data_manage";
+import DomainManageContent from "../components/dns/domain_manage";
 
 const { Content } = Layout;
 class ContentLayout extends Component {
@@ -111,6 +112,15 @@ class ContentLayout extends Component {
                         path="/admin/task"
                         render={() => (
                             <TaskContent
+                                isSuperAdmin={this.state.isSuperAdmin}
+                            />
+                        )}
+                    />
+
+                    <Route
+                        path="/admin/dns/domain_manage"
+                        render={() => (
+                            <DomainManageContent
                                 isSuperAdmin={this.state.isSuperAdmin}
                             />
                         )}

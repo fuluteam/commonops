@@ -11,6 +11,7 @@ import (
 	"github.com/chujieyang/commonops/ops/controllers/daily_job"
 	"github.com/chujieyang/commonops/ops/controllers/data"
 	"github.com/chujieyang/commonops/ops/controllers/dms"
+	"github.com/chujieyang/commonops/ops/controllers/dns"
 	"github.com/chujieyang/commonops/ops/controllers/k8s"
 	"github.com/chujieyang/commonops/ops/controllers/monitor"
 	"github.com/chujieyang/commonops/ops/controllers/user"
@@ -211,6 +212,18 @@ func RegisterRouter(engine *gin.Engine) {
 		dmsRoute.GET("/userDatabaseData", dms.IGetUserDmsDatabaseData)
 		dmsRoute.POST("/userExecSQL", dms.IPostDmsUserExecSQL)
 		dmsRoute.GET("/userLog", dms.IGetDmsQueryLogData)
+	}
+
+	dnsRoute := engine.Group("/dns", AuthMiddleWare())
+	{
+		dnsRoute.POST("/domain", dns.IPostDnsDomain)
+		dnsRoute.GET("/domainList", dns.IGetDnsDomainList)
+		dnsRoute.GET("/domainHistoryList", dns.IGetDnsDomainHistoryList)
+		dnsRoute.GET("/domainRecordsList", dns.IGetDnsDomainRecordsList)
+		dnsRoute.POST("/domainRecord", dns.IPostDnsDomainRecord)
+		dnsRoute.POST("/domainRecordUpdate", dns.IUpdateDnsDomainRecord)
+		dnsRoute.DELETE("/domainRecord", dns.IDeleteDnsDomainRecord)
+		dnsRoute.POST("/domainRecordStatus", dns.IPostDnsDomainRecordStatus)
 	}
 
 }

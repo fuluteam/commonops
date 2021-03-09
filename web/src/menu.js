@@ -40,6 +40,11 @@ const sideMenus = [
         ],
     },
     {
+        menuTitle: "域名DNS",
+        icon: "CompassOutlined",
+        subMenus: [{ title: "解析管理", route: "/admin/dns/domain_manage" }],
+    },
+    {
         menuTitle: "CI & CD",
         icon: "GitlabOutlined",
         subMenus: [

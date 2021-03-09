@@ -399,7 +399,8 @@ VALUES
 	(15,'kubernetes管理','kubernetes管理入口','/admin/k8s_cluster/info'),
 	(17,'dms权限管理','dms权限管理','/admin/dms/auth_manage'),
 	(18,'dms实例管理','dms实例管理','/admin/dms/instance_manage'),
-	(19,'dms数据操作','dms数据操作','/admin/dms/data_manage');
+	(19,'dms数据操作','dms数据操作','/admin/dms/data_manage'),
+	(20,'DNS解析入口','DNS解析入口','/admin/dns/domain_manage');
 
 /*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -490,7 +491,8 @@ VALUES
 	(93,1,2),
   (94,1,17),
   (95,1,18),
-  (96,1,19);
+  (96,1,19),
+  (97,1,20);
 
 /*!40000 ALTER TABLE `role_permissions` ENABLE KEYS */;
 UNLOCK TABLES;
